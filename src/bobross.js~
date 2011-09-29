@@ -25,16 +25,6 @@ var bobross = (function(){
             // border
             context.strokeStyle = "#000000";
             context.strokeRect(5, 5, 490, 290);
-
-            // trunk
-            context.strokeStyle = "Brown";
-            context.lineWidth = 10;
-            context.lineCap = "square";
-            context.beginPath();
-            context.moveTo(canvas.width / 2, 290);
-            context.lineTo(canvas.width / 2, 270);
-            context.stroke();
-            context.closePath();
         },
         sayHello : function(){
             return "Let's beat the devil out of it!";
