@@ -17,14 +17,14 @@ var bobross = (function(){
             context.fillRect(0,0,500,300);
             context.font = "20px _sans";
 
+            // border
+            context.strokeStyle = "#000000";
+            context.strokeRect(5, 5, 490, 290);
+
             // text
             context.fillStyle = "#000000";
             context.textAlign = "center";
             context.fillText ("Happy Little Canvas", canvas.width / 2, 30);
-
-            // border
-            context.strokeStyle = "#000000";
-            context.strokeRect(5, 5, 490, 290);
 
             // trunk
             context.strokeStyle = "Brown";
