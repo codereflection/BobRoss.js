@@ -13,7 +13,7 @@ var bobross = (function(){
             var context = canvas.getContext("2d");
 
             // background
-            context.fillStyle = "#fffaaa";
+            context.fillStyle = "#aaaaaa";
             context.fillRect(0,0,500,300);
             context.font = "20px _sans";
 
