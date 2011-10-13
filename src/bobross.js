@@ -50,7 +50,7 @@ var bobross = (function(){
             context.fillStyle = groundGrad;
             context.fill();
             context.strokeStyle = "#42350B";
-            context.stroke();
+            //context.stroke();
 
 
             // trunk
@@ -58,17 +58,16 @@ var bobross = (function(){
             context.lineWidth = 1;
             context.lineCap = "square";
             context.beginPath();
-            context.rect(center - 10, 260, 10, 25);
-            var trunkGrad = context.createLinearGradient(center - 10, 0, center + 10, 0);
+            context.rect(center - 12, 260, 14, 25);
+            var trunkGrad = context.createLinearGradient(center - 12, 0, center + 12, 0);
             trunkGrad.addColorStop(0, "#241A0C");
             trunkGrad.addColorStop(1, "#D6820D");
             context.fillStyle = trunkGrad;
             context.fill();
-            context.stroke();
+            //context.stroke();
             context.closePath();
 
             // branches
-            context.strokeStyle = "Green";
             context.lineWidth = 2;
             context.lineCap = "square";
             context.beginPath();
@@ -99,12 +98,13 @@ var bobross = (function(){
             branchGrad.addColorStop(1, "#89B41C");
             context.fillStyle = branchGrad;
             context.fill();
-            context.stroke();
+            context.strokeStyle = "Black";
+            //context.stroke();
             context.closePath();
 
             
             // border
-            context.strokeStyle = "#000000";
+            context.strokeStyle = "#343434";
             context.strokeRect(5, 5, 490, 290);
         },
         sayHello : function(){
