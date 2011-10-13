@@ -11,6 +11,7 @@ var bobross = (function(){
 
             var canvas = $("#treeCanvas")[0];
             var context = canvas.getContext("2d");
+            var center = canvas.width / 2;
 
             // background
             context.fillStyle = "#aaaaaa";
@@ -28,11 +29,39 @@ var bobross = (function(){
 
             // trunk
             context.strokeStyle = "Brown";
-            context.lineWidth = 10;
+            context.lineWidth = 20;
             context.lineCap = "square";
             context.beginPath();
-            context.moveTo(canvas.width / 2, 290);
-            context.lineTo(canvas.width / 2, 270);
+            context.moveTo(center, 285);
+            context.lineTo(center, 280);
+            context.stroke();
+            context.closePath();
+
+            // branches
+            context.strokeStyle = "Green";
+            context.lineWidth = 2;
+            context.lineCap = "square";
+            context.beginPath();
+            //   left side
+            context.moveTo(center, 270);
+            context.lineTo(center - 100, 270);
+            context.lineTo(center - 60, 230);
+            context.lineTo(center - 80, 230);
+            context.lineTo(center - 40, 190);
+            context.lineTo(center - 60, 190);
+            context.lineTo(center - 20, 150);
+            context.lineTo(center - 40, 150);
+            context.lineTo(center, 110);
+
+            //   right side
+            context.lineTo(center + 40, 150);
+            context.lineTo(center + 20, 150);
+            context.lineTo(center + 60, 190);
+            context.lineTo(center + 40, 190);
+            context.lineTo(center + 80, 230);
+            context.lineTo(center + 60, 230);
+            context.lineTo(center + 100, 270);
+            context.lineTo(center, 270);
             context.stroke();
             context.closePath();
         },
